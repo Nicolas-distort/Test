@@ -36,7 +36,7 @@ void main() {
 /*
 4. Part B
 1: It should be 0
-2:
+2: Character.isDigit(text.charAt(i)) is used to check if the character is a digit
 3: After incrementing all the tex length
  */
 public static int countDigits(String text){
@@ -75,19 +75,22 @@ public static boolean isValidPassword(String password){
 }
 /*
 6. Part D
-The <= will cause an out of bound index error
+The <= will cause an out of bound index error and it should be <
  */
 public static int countUppercase(String text) {
     int count = 0;
 
-    for (int i = 0; i <= text.length(); i++) {
-        if (Character.isUpperCase(text.charAt(i)));
+    for (int i = 0; i < text.length(); i++) {
+        if (Character.isUpperCase(text.charAt(i)))
         count++;
     }
-
     return count;
 }
 /*
 7. Part E
  */
-public static String generateCode()
+public static String generateCode() {
+    String code = "";
+    for (int i = 0; i = < 4; i++) {
+        int index = rand.nextInt(5);
+    }
