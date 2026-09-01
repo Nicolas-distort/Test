@@ -1,3 +1,4 @@
+import java.util.Random;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 /*
@@ -88,9 +89,50 @@ public static int countUppercase(String text) {
 }
 /*
 7. Part E
+import java.util.Random; has been imported at the top of the code
  */
 public static String generateCode() {
     String code = "";
-    for (int i = 0; i = < 4; i++) {
+    Random rand = new Random();
+    String allowed = "ABCDE";
+    for (int i = 0; i < 4; i++) {
         int index = rand.nextInt(5);
+        code += allowed.charAt(index);
     }
+    return code;
+}
+/*
+Part F
+1: The test will pass because the password has at least 8 characters, 1 uppercase, 1 lowercase, and 1 digit
+2: The test will fail because the password has
+ */
+@test
+public void countDigitsNormalCase() {
+    assertEquals(4, StudentAccessValidator.countDigits("Vanier2026"));
+}
+public void isValidPassword(); {
+    assertEquals(0, StudentAccessValidator.countDigits("Abcdefg1"));
+}
+public void countUppercase(); {
+    assertEquals{2 , StudentAccessValidator.countUppercase("V1A2");}
+}
+public void generateCode(); {
+    String code = StudentAccessValidator.();
+    assertEquals(4, code.length());
+    "ABCDE".indexOf(character) >= 0;
+}
+/* Part G
+1: One digit is enough to pass the test
+2: It returns true during the first loop repetition
+3: It will return false because there is no digit in the string
+4: The method only needs to know whether at least one digit is exist and not how many
+5: The loop runs zero times and then the methoid returns false
+ */
+public static boolean containsDigit(String text) {
+    for (int i = 0; i < text.length(); i++) {
+        if (Character.isDigit(text.charAt(i)))
+            return true;
+    }
+
+    return false;
+}
