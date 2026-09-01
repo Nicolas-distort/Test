@@ -4,23 +4,27 @@ Part F
 2: The test will fail because the password has
  */
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MainTest {
     @Test
     public void countDigitsNormalCase() {
         assertEquals(4, StudentAccessValidator.countDigits("Vanier2026"));
     }
+
     @Test
     public void isValidPassword(); {
         assertEquals(0, StudentAccessValidator.countDigits("Abcdefg1"));
     }
+
     @Test
     public void countUppercase(); {
         assertEquals{2 , StudentAccessValidator.countUppercase("V1A2");}
     }
+
     @Test
     public void generateCode(); {
-        String code = StudentAccessValidator.();
+        String code = StudentAccessValidator();
         assertEquals(4, code.length());
         "ABCDE".indexOf(character) >= 0;
     }

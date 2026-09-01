@@ -1,4 +1,3 @@
-import org.junit.jupiter.api.Test;
 import java.util.Random;
 /*
 3. Part A
@@ -82,7 +81,7 @@ public static int countUppercase(String text) {
 
     for (int i = 0; i < text.length(); i++) {
         if (Character.isUpperCase(text.charAt(i)))
-        count++;
+            count++;
     }
     return count;
 }
