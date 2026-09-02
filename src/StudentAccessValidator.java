@@ -1,6 +1,7 @@
 /*
 Part H
 */
+import java.util.Random;
 public class StudentAccessValidator {
     
     public static boolean isValidStudentId(String id) {
@@ -20,11 +21,43 @@ public class StudentAccessValidator {
         }
         return true;
     }
-    
+    public static boolean isValidPassword(String password){
+        boolean upper = false;
+        boolean lower = false;
+        boolean digit = false;
+        if (password == null) {
+        return false;
+        }
+        for (int i = 0; i < password.length(); i++) {
+        char c = password.charAt(i);
+
+        if (Character.isUpperCase(c))
+            upper = true;
+        else if (Character.isLowerCase(c))
+            lower = true;
+        else if (Character.isDigit(c))
+            digit = true;
+    }
+    boolean min = password.length() >= 8;
+
+    return upper && lower && digit && min;
+}
     public static boolean isValidAccess(String id, String password) {
         return isValidStudentId(id) && isValidPassword(password);
     }
-
+        public static String generateCode() {
+        String code = "";
+        Random rand = new Random();
+        String allowed = "ABCDE";
+        for (int i = 0; i < 4; i++) {
+        int index = rand.nextInt(5);
+        code += allowed.charAt(index);
+    }
+    return code;
+    }
+    public static String generateAccessCode() {
+    return generateCode();
+}
 /* 
 Part I - 1
 */
