@@ -55,8 +55,14 @@ public class StudentAccessValidator {
     }
     return code;
     }
-    public static String generateAccessCode() {
-    return generateCode();
+    public static boolean containsDigit(String text) {
+        for (int i = 0; i < text.length(); i++) {
+            if (Character.isDigit(text.charAt(i)))
+                return true;
+        }
+
+        return false;
+    }
 }
 /* 
 Part I - 1
