@@ -7,7 +7,7 @@ A3: It will be out of bound index error
 A4: It would be an error because there is no reference point
 A5: It would not pass the test because there is no lowercase detected
 A6: It would not pass the test because there is no uppercase detected
- */
+*/
 void main() {
     String password = "Vanier2026";
 
@@ -37,7 +37,7 @@ void main() {
 1: It should be 0
 2: Character.isDigit(text.charAt(i)) is used to check if the character is a digit
 3: After incrementing all the tex length
- */
+*/
 public static int countDigits(String text){
     int count = 0;
 
@@ -51,7 +51,7 @@ public static int countDigits(String text){
 /*
 5. Part C
 They are better only for verifying if the condition is fullfilled
- */
+*/
 public static boolean isValidPassword(String password){
 
     boolean upper = false;
@@ -75,7 +75,8 @@ public static boolean isValidPassword(String password){
 /*
 6. Part D
 The <= will cause an out of bound index error and it should be <
- */
+Responsible AI reflection: Change the mistake of using <= to < and understanding to prevvent an invalid String index
+*/
 public static int countUppercase(String text) {
     int count = 0;
 
@@ -88,7 +89,7 @@ public static int countUppercase(String text) {
 /*
 7. Part E
 import java.util.Random; has been imported at the top of the code
- */
+*/
 public static String generateCode() {
     String code = "";
     Random rand = new Random();
@@ -99,7 +100,6 @@ public static String generateCode() {
     }
     return code;
 }
-
 /* Part G
 1: One digit is enough to pass the test
 2: It returns true during the first loop repetition
@@ -115,3 +115,8 @@ public static boolean containsDigit(String text) {
 
     return false;
 }
+/*
+Responsible AI reflection
+Change the mistake of using <= to < and understanding to prevvent an invalid String index
+I traced the code of vanier and saw the semicolon made the count++ run for each character then I verified the issue before changing it
+*/
