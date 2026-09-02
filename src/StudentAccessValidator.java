@@ -3,7 +3,29 @@ Part H
 */
 import java.util.Random;
 public class StudentAccessValidator {
-    
+    public static int countDigits(String text) {
+        int count = 0;
+
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.charAt(i);
+
+            if (Character.isDigit(c))
+                count++;
+        }
+
+        return count;
+    }
+    public static int countUppercase(String text) {
+        int count = 0;
+
+        for (int i = 0; i < text.length(); i++) {
+            if (Character.isUpperCase(text.charAt(i)))
+                count++;
+        }
+
+        return count;
+    }
+
     public static boolean isValidStudentId(String id) {
         if (id == null) {
             return false;
