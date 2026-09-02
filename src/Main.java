@@ -36,7 +36,7 @@ void main() {
 4. Part B
 1: It should be 0
 2: Character.isDigit(text.charAt(i)) is used to check if the character is a digit
-3: After incrementing all the tex length
+3: After incrementing all the text length
 */
 public static int countDigits(String text){
     int count = 0;
