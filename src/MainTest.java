@@ -15,18 +15,22 @@ public class MainTest {
 
     @Test
     public void isValidPassword() {
-        assertEquals(0, StudentAccessValidator.countDigits("Abcdefg1"));
+        assertTrue(StudentAccessValidator.isValidPassword("Abcdefg1"));
     }
 
     @Test
     public void countUppercase() {
-        assertEquals(2 , Main.countUppercase("V1A2"));
+        assertEquals(2 , StudentAccessValidator.countUppercase("V1A2"));
     }
 
     @Test
     public void generateCode() {
         String code = StudentAccessValidator.generateCode();
+
         assertEquals(4, code.length());
-        "ABCDE".indexOf(code.charAt()) >= 0;
+
+        for (int i = 0; i < code.length(); i++) {
+            assertTrue("ABCDE".indexOf(code.charAt(i)) >= 0);
+        }
     }
-}
+    }

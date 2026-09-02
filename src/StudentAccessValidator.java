@@ -77,14 +77,8 @@ public class StudentAccessValidator {
     }
     return code;
     }
-    public static boolean containsDigit(String text) {
-        for (int i = 0; i < text.length(); i++) {
-            if (Character.isDigit(text.charAt(i)))
-                return true;
-        }
-
-        return false;
-    }
+    public static String generateAccessCode() {
+    return generateCode();
 }
 /* 
 Part I - 1
@@ -100,14 +94,6 @@ Part I - 2
 */
     public static boolean isValidAccess(String id, String password, String generatedCode, String enteredCode) {
         return isValidAccess(id, password) && verifyAccessCode(generatedCode, enteredCode);
-    }
-    public static boolean containsDigit(String text) {
-        for (int i = 0; i < text.length(); i++) {
-            if (Character.isDigit(text.charAt(i)))
-                return true;
-        }
-
-        return false;
     }
 }
 /*
